@@ -1,19 +1,20 @@
 package br.com.fiap.kraftheinz.dao;
 
 import br.com.fiap.kraftheinz.connection.ConnectionFactory;
-import br.com.fiap.kraftheinz.model.Fabrica;
 import br.com.fiap.kraftheinz.model.Lote;
-
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LoteDao {
     private Connection connection;
 
-    public void LoteDAO() {
+    public LoteDao() {
         ConnectionFactory factory = new ConnectionFactory();
         connection = factory.conectar();
+
     }
 
     public void insert(Lote lote) {
@@ -90,36 +91,7 @@ public class LoteDao {
             return null;
         }
     }
-//    public void delete(int numero)  {
-//        String sql = "delete from T_KH_LOTE where cd_lote=?";
-//        try{
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//            stmt.setInt(1, numero);
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Deletado com sucesso!");
-//        }catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//    }
-//    public void update(Lote lote) {
-//        String sql = "update T_KH_LOTE set qt_estoque=? where cd_lote=?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//
-//            stmt.setInt(1, lote.getCodigo());
-//            stmt.setInt(2, lote.getEstoque());
-//
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Atualizado com sucesso!");
-//        } catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//
-//    }
+
 }
 
 

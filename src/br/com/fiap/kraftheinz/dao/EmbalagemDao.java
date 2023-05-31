@@ -2,8 +2,6 @@ package br.com.fiap.kraftheinz.dao;
 
 import br.com.fiap.kraftheinz.connection.ConnectionFactory;
 import br.com.fiap.kraftheinz.model.Embalagem;
-import br.com.fiap.kraftheinz.model.Produto;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -92,35 +90,5 @@ public class EmbalagemDao {
             return null;
         }
     }
-//    public void delete(int numero)  {
-//        String sql = "delete from T_KH_EMBALAGEM where cd_embalagem=?";
-//        try{
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//            stmt.setInt(1, numero);
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Deletado com sucesso!");
-//        }catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//    }
-//    public void update(Embalagem embalagem) {
-//        String sql = "update T_KH_EMBALAGEM set tp_embalagem=? where cd_embalagem=?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//
-//            stmt.setString(1, embalagem.getTipo());
-//            stmt.setInt(2, embalagem.getCodigo());
-//
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Atualizado com sucesso!");
-//        } catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//
-//    }
 }
 

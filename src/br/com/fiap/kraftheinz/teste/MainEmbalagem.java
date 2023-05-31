@@ -11,25 +11,20 @@ public class MainEmbalagem {
 
          testaInsert();
          testaGetAll();
-
-
     }
 
     private static void testaInsert() {
-       // Random sequence = new Random();
 
         Embalagem embalagem = new Embalagem();
-       // embalagem.setCodigo(sequence.nextInt(9999) + sequence.nextInt(9999));
         embalagem.setTipo("Vidro");
-        embalagem.setReciclavel(false);
-        embalagem.setReutilizavel(false);
+        embalagem.setReciclavel(true);
+        embalagem.setReutilizavel(true);
         embalagem.setCompostavel(false);
 
         EmbalagemDao dao = new EmbalagemDao();
         dao.insert(embalagem);
 
     }
-
 
     private static void testaGetAll() {
 
@@ -39,10 +34,6 @@ public class MainEmbalagem {
         for (Embalagem embalagem: embalagens){
             System.out.println("Embalagem: " + embalagem.toString());
         }
-
-
     }
-
-
 
 }

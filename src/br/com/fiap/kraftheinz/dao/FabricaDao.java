@@ -1,9 +1,7 @@
 package br.com.fiap.kraftheinz.dao;
 
 import br.com.fiap.kraftheinz.connection.ConnectionFactory;
-import br.com.fiap.kraftheinz.model.Embalagem;
 import br.com.fiap.kraftheinz.model.Fabrica;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +9,14 @@ import java.util.List;
 public class FabricaDao {
     private Connection connection;
 
-    public void FabricaDAO() {
+    public FabricaDao() {
         ConnectionFactory factory = new ConnectionFactory();
         connection = factory.conectar();
     }
 
     public void insert(Fabrica fabrica) {
         String sql = "insert into T_KH_FABRICA (cd_fabrica, nm_fabrica, cd_pais)" +
-                "values (SQ_FABRICA.nextval, ?, ?)" ;
+                "values (SQ_KH_FABRICA.nextval, ?, ?)" ;
 
         PreparedStatement stmt = null;
         try {
@@ -86,36 +84,6 @@ public class FabricaDao {
             return null;
         }
     }
-//    public void delete(int numero)  {
-//        String sql = "delete from T_KH_FABRICA where cd_fabrica=?";
-//        try{
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//            stmt.setInt(1, numero);
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Deletado com sucesso!");
-//        }catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//    }
-//    public void update(Fabrica fabrica) {
-//        String sql = "update T_KH_FABRICA set nm_fabrica=? where cd_fabrica=?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//
-//            stmt.setString(1, fabrica.getNome());
-//            stmt.setInt(2, fabrica.getCodigo());
-//
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Atualizado com sucesso!");
-//        } catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//
-//    }
 }
 
 

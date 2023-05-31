@@ -9,7 +9,9 @@ public class Marca implements Serializable {
     public Marca(){
 
     }
-
+    public Marca(String nome){
+        this.nome = nome;
+    }
     public int getCodigo() {
         return codigo;
     }

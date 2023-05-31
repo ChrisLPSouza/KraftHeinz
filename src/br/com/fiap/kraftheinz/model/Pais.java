@@ -9,6 +9,9 @@ public class Pais implements Serializable {
     public Pais(){
 
     }
+    public Pais(String nome){
+        this.nome = nome;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -37,7 +40,7 @@ public class Pais implements Serializable {
 
     @Override
     public String toString() {
-        return "Pais{" +
+        return "País{" +
                 "codigo=" + codigo +
                 ", nome='" + nome + '\'' +
                 '}';

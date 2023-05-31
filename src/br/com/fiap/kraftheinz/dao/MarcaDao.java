@@ -1,9 +1,7 @@
 package br.com.fiap.kraftheinz.dao;
 
 import br.com.fiap.kraftheinz.connection.ConnectionFactory;
-import br.com.fiap.kraftheinz.model.Lote;
 import br.com.fiap.kraftheinz.model.Marca;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +9,14 @@ import java.util.List;
 public class MarcaDao {
     private Connection connection;
 
-    public void MarcaDAO() {
+    public MarcaDao() {
         ConnectionFactory factory = new ConnectionFactory();
         connection = factory.conectar();
     }
 
     public void insert(Marca marca) {
         String sql = "insert into T_KH_MARCA (cd_marca, nm_marca)" +
-                "values (SQ_MARCA.nextval, ?)" ;
+                "values (SQ_KH_MARCA.nextval, ?)" ;
 
         PreparedStatement stmt = null;
         try {
@@ -85,37 +83,8 @@ public class MarcaDao {
             return null;
         }
     }
-//    public void delete(int numero)  {
-//        String sql = "delete from T_KH_MARCA where cd_marca=?";
-//        try{
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//            stmt.setInt(1, numero);
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Deletado com sucesso!");
-//        }catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//    }
-//    public void update(Marca marca) {
-//        String sql = "update T_KH_MARCA set nm_marca=? where cd_marca=?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(sql);
-//
-//            stmt.setInt(1, marca.getCodigo());
-//            stmt.setString(2, marca.getNome());
-//
-//            stmt.execute();
-//            stmt.close();
-//            System.out.println("Atualizado com sucesso!");
-//        } catch (SQLException e){
-//            System.err.println("Erro: " + e.getMessage());
-//        }
-//
-//
-//    }
-}
+
+    }
 
 
 

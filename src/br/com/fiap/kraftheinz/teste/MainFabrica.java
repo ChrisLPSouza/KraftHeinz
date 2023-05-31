@@ -10,25 +10,18 @@ public class MainFabrica {
 
         testaInsert();
         testaGetAll();
-
-
     }
 
     private static void testaInsert() {
-        // Random sequence = new Random();
-
-        Fabrica fabrica = new Fabrica();
-        // fabrica.setCodigo(sequence.nextInt(9999) + sequence.nextInt(9999));
-       fabrica.setNome("Anápolis");
-       fabrica.setCdPais(1);
+       Fabrica fabrica = new Fabrica();
+       fabrica.setNome("Goiás");
+       fabrica.setCdPais(5);
 
 
         FabricaDao dao = new FabricaDao();
         dao.insert(fabrica);
 
     }
-
-
     private static void testaGetAll() {
 
         FabricaDao dao = new FabricaDao();
@@ -37,7 +30,5 @@ public class MainFabrica {
         for (Fabrica fabrica: fabricas){
             System.out.println("Fábrica: " + fabrica.toString());
         }
-
-
     }
 }

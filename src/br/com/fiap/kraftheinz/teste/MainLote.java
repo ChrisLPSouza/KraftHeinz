@@ -1,11 +1,10 @@
 package br.com.fiap.kraftheinz.teste;
 
-import br.com.fiap.kraftheinz.dao.FabricaDao;
 import br.com.fiap.kraftheinz.dao.LoteDao;
-import br.com.fiap.kraftheinz.model.Fabrica;
 import br.com.fiap.kraftheinz.model.Lote;
-
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class MainLote {
@@ -14,27 +13,24 @@ public class MainLote {
         testaInsert();
         //testaGetAll();
 
-
     }
-
     private static void testaInsert() {
         // Random sequence = new Random();
 
         Lote lote = new Lote();
-        // lote.setCodigo(sequence.nextInt(9999) + sequence.nextInt(9999));
         lote.setFabricacao(new Date(System.currentTimeMillis()));
-        lote.setEstoque(5800);
+        lote.setValidade(new Date(newDate ("05-10-2024")));
+        lote.setEstoque(582);
+        lote.setCdProduto(8);
         lote.setCdEmbalagem(1);
         lote.setCdFabrica(1);
-        lote.setCdProduto(1);
+
 
 
         LoteDao dao = new LoteDao();
         dao.insert(lote);
 
     }
-
-
     private static void testaGetAll() {
 
         LoteDao dao = new LoteDao();
@@ -43,7 +39,18 @@ public class MainLote {
         for (Lote lote: lotes){
             System.out.println("Lote: " + lote.toString());
         }
+    }
+    private static long newDate (String date) {
+        // String string_date = "12-December-2012";
 
-
+        SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
+        try {
+            java.util.Date d = f.parse(date);
+            long milliseconds = d.getTime();
+            return milliseconds;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 }
