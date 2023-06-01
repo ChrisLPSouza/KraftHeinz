@@ -1,6 +1,7 @@
 package br.com.fiap.kraftheinz.teste;
 
 import br.com.fiap.kraftheinz.dao.PaisDao;
+import br.com.fiap.kraftheinz.dao.factory.DAOFactory;
 import br.com.fiap.kraftheinz.model.Pais;
 
 import java.util.ArrayList;
@@ -15,10 +16,10 @@ public class MainPais {
 
     private static void testaInsert() {
 
-        Pais pais1 = new Pais("França");
-        Pais pais2 = new Pais("Itália");
-        Pais pais3 = new Pais("Argentina");
-        Pais pais4 = new Pais("Brasil");
+        Pais pais1 = new Pais("Japão");
+        Pais pais2 = new Pais("Canadá");
+        Pais pais3 = new Pais("Índia");
+        Pais pais4 = new Pais("Itália");
 
         List<Pais> listaPais = new ArrayList<>();
         listaPais.add(pais1);
@@ -26,7 +27,7 @@ public class MainPais {
         listaPais.add(pais3);
         listaPais.add(pais4);
 
-        PaisDao dao = new PaisDao();
+        PaisDao dao = DAOFactory.getDAOFactory(1).getPaisDao();
 
 
         for (Pais pais : listaPais){
@@ -37,7 +38,7 @@ public class MainPais {
     }
     private static void testaGetAll() {
 
-        PaisDao dao = new PaisDao();
+        PaisDao dao = DAOFactory.getDAOFactory(1).getPaisDao();
         List<Pais> paisList = dao.getAll();
 
         for (Pais pais: paisList){

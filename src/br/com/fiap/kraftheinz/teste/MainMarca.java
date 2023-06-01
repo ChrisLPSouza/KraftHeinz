@@ -1,6 +1,7 @@
 package br.com.fiap.kraftheinz.teste;
 
 import br.com.fiap.kraftheinz.dao.MarcaDao;
+import br.com.fiap.kraftheinz.dao.factory.DAOFactory;
 import br.com.fiap.kraftheinz.model.Marca;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class MainMarca {
         listaMarca.add(marca2);
         listaMarca.add(marca3);
 
-        MarcaDao dao = new MarcaDao();
+        MarcaDao dao = DAOFactory.getDAOFactory(1).getMarcaDao();
 
         for (Marca marca : listaMarca){
            dao.insert(marca);
@@ -32,7 +33,7 @@ public class MainMarca {
     }
     private static void testaGetAll() {
 
-        MarcaDao dao = new MarcaDao();
+        MarcaDao dao = DAOFactory.getDAOFactory(1).getMarcaDao();
         List<Marca> marcas = dao.getAll();
 
         for (Marca marca: marcas){

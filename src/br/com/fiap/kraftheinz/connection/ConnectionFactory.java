@@ -11,7 +11,7 @@ public class ConnectionFactory {
     public Connection conectar()  {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection(ORACLE, "RM97081", "150886");
+            connection = DriverManager.getConnection(ORACLE, "RM97465", "051082");
         } catch (SQLException e) {
             System.out.println("ERRO CONECTAR: "+ e.getMessage());
         } finally {

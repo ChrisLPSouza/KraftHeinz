@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6b91c866-8d6d-4d97-bd40-6f89393724b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/KraftHeinz.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/dao/factory/ConnectionDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/connection/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/connection/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainEmbalagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainEmbalagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainFabrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainFabrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainLote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainLote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainMarca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainMarca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainPais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainPais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/fiap/kraftheinz/teste/MainProduto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QXJ30SzyMdeX4K6GeLutlkKeMW" />
   <component name="ProjectViewState">
@@ -21,11 +44,95 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/christiane/FIAP 2 semestre/IntelliJ_Projects/Pasta Sem Título/KraftHeinz",
+    "last_opened_file_path": "/Users/christiane/FIAP 2 semestre/IntelliJ_Projects/KraftHeinz",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32528734",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.MainLote">
+    <configuration name="MainFabrica" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.kraftheinz.teste.MainFabrica" />
+      <module name="KraftHeinz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.fiap.kraftheinz.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainLote" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.kraftheinz.teste.MainLote" />
+      <module name="KraftHeinz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.fiap.kraftheinz.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainMarca" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.kraftheinz.teste.MainMarca" />
+      <module name="KraftHeinz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.fiap.kraftheinz.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPais" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.kraftheinz.teste.MainPais" />
+      <module name="KraftHeinz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.fiap.kraftheinz.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainProduto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.kraftheinz.teste.MainProduto" />
+      <module name="KraftHeinz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.fiap.kraftheinz.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainLote" />
+        <item itemvalue="Application.MainProduto" />
+        <item itemvalue="Application.MainMarca" />
+        <item itemvalue="Application.MainFabrica" />
+        <item itemvalue="Application.MainPais" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,6 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1685493790099</updated>
       <workItem from="1685493791931" duration="52000" />
+      <workItem from="1685649574557" duration="230000" />
+      <workItem from="1685649845485" duration="4263000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 package br.com.fiap.kraftheinz.teste;
 
 import br.com.fiap.kraftheinz.dao.LoteDao;
+import br.com.fiap.kraftheinz.dao.factory.DAOFactory;
 import br.com.fiap.kraftheinz.model.Lote;
 import java.sql.Date;
 import java.text.ParseException;
@@ -18,23 +19,23 @@ public class MainLote {
         // Random sequence = new Random();
 
         Lote lote = new Lote();
-        lote.setCodigo("L311311TS1NG");
+        lote.setCodigo("L311412TS2NG");
         lote.setFabricacao(new Date(System.currentTimeMillis()));
-        lote.setValidade(new Date(newDate ("05-10-2024")));
+        lote.setValidade(new Date(newDate ("08-12-2024")));
         lote.setEstoque(582);
         lote.setCdProduto(1);
-        lote.setCdEmbalagem(1);
-        lote.setCdFabrica(2);
+        lote.setCdEmbalagem(5);
+        lote.setCdFabrica(11);
 
 
 
-        LoteDao dao = new LoteDao();
+        LoteDao dao = DAOFactory.getDAOFactory(1).getLoteDao();
         dao.insert(lote);
 
     }
     private static void testaGetAll() {
 
-        LoteDao dao = new LoteDao();
+        LoteDao dao = DAOFactory.getDAOFactory(1).getLoteDao();
         List<Lote> lotes = dao.getAll();
 
         for (Lote lote: lotes){

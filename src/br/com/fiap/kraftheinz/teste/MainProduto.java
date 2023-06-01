@@ -1,6 +1,7 @@
 package br.com.fiap.kraftheinz.teste;
 
 import br.com.fiap.kraftheinz.dao.ProdutoDao;
+import br.com.fiap.kraftheinz.dao.factory.DAOFactory;
 import br.com.fiap.kraftheinz.model.Produto;
 import java.util.List;
 
@@ -20,14 +21,14 @@ public class MainProduto {
         produto2.setNome("Molho de tomate");
         produto2.setCdMarca(2);
 
-        ProdutoDao dao = new ProdutoDao();
+        ProdutoDao dao = DAOFactory.getDAOFactory(1).getProdutoDao();
         dao.insert(produto1);
         dao.insert(produto2);
 
     }
     private static void testaGetAll() {
 
-        ProdutoDao dao = new ProdutoDao();
+        ProdutoDao dao = DAOFactory.getDAOFactory(1).getProdutoDao();
         List<Produto> produtos = dao.getAll();
 
         for (Produto produto: produtos){
