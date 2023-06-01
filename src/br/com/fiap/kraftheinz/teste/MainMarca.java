@@ -17,13 +17,11 @@ public class MainMarca {
         Marca marca1 = new Marca("Heinz");
         Marca marca2 = new Marca("Quero");
         Marca marca3 = new Marca("Kraft");
-        Marca marca4 = new Marca("Heinz");
 
         List<Marca> listaMarca = new ArrayList<>();
         listaMarca.add(marca1);
         listaMarca.add(marca2);
         listaMarca.add(marca3);
-        listaMarca.add(marca4);
 
         MarcaDao dao = new MarcaDao();
 

@@ -11,19 +11,20 @@ public class MainLote {
     public static void main(String[] args) {
 
         testaInsert();
-        //testaGetAll();
+        testaGetAll();
 
     }
     private static void testaInsert() {
         // Random sequence = new Random();
 
         Lote lote = new Lote();
+        lote.setCodigo("L311311TS1NG");
         lote.setFabricacao(new Date(System.currentTimeMillis()));
         lote.setValidade(new Date(newDate ("05-10-2024")));
         lote.setEstoque(582);
-        lote.setCdProduto(8);
+        lote.setCdProduto(1);
         lote.setCdEmbalagem(1);
-        lote.setCdFabrica(1);
+        lote.setCdFabrica(2);
 
 
 

@@ -20,9 +20,17 @@ public class MainEmbalagem {
         embalagem.setReciclavel(true);
         embalagem.setReutilizavel(true);
         embalagem.setCompostavel(false);
+        
+        Embalagem embalagem2 = new Embalagem();
+        embalagem2.setTipo("Plástico");
+        embalagem2.setReciclavel(true);
+        embalagem2.setReutilizavel(false);
+        embalagem2.setCompostavel(false);
 
         EmbalagemDao dao = new EmbalagemDao();
         dao.insert(embalagem);
+        dao.insert(embalagem2);
+
 
     }
 

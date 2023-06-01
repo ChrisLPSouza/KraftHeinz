@@ -47,6 +47,7 @@ public class FabricaDao {
                 Fabrica fabrica = new Fabrica();
                 fabrica.setCodigo(rs.getInt("cd_fabrica"));
                 fabrica.setNome(rs.getString("nm_fabrica"));
+                fabrica.setCdPais(rs.getInt("cd_pais"));
 
                 fabricas.add(fabrica);
             }

@@ -19,18 +19,19 @@ public class LoteDao {
 
     public void insert(Lote lote) {
         String sql = "insert into T_KH_LOTE (cd_lote, dt_fabricacao, dt_validade, qt_estoque, cd_produto, cd_embalagem, cd_fabrica)" +
-                "values (SQ_KH_LOTE.nextval, ?, ?, ?, ?, ?, ?)" ;
+                "values (?, ?, ?, ?, ?, ?, ?)" ;
 
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement(sql);
 
-            stmt.setDate(1, lote.getFabricacao());
-            stmt.setDate(2, lote.getValidade());
-            stmt.setInt(3, lote.getEstoque());
-            stmt.setInt(4, lote.getCdProduto());
-            stmt.setInt(5, lote.getCdEmbalagem());
-            stmt.setInt(6, lote.getCdFabrica());
+            stmt.setString(1, lote.getCodigo());
+            stmt.setDate(2, lote.getFabricacao());
+            stmt.setDate(3, lote.getValidade());
+            stmt.setInt(4, lote.getEstoque());
+            stmt.setInt(5, lote.getCdProduto());
+            stmt.setInt(6, lote.getCdEmbalagem());
+            stmt.setInt(7, lote.getCdFabrica());
 
             stmt.execute();
             stmt.close();
@@ -52,8 +53,15 @@ public class LoteDao {
 
             while(rs.next()) {
                 Lote lote = new Lote();
-                lote.setCodigo(rs.getInt("cd_lote"));
+                lote.setCodigo(rs.getString("cd_lote"));
+                lote.setFabricacao(rs.getDate("dt_fabricacao"));
+                lote.setValidade(rs.getDate("dt_validade"));
                 lote.setEstoque(rs.getInt("qt_estoque"));
+                lote.setCdProduto(rs.getInt("cd_produto"));
+                lote.setCdEmbalagem(rs.getInt("cd_embalagem"));
+                lote.setCdFabrica(rs.getInt("cd_fabrica"));
+
+
 
                 lotes.add(lote);
             }
@@ -78,7 +86,7 @@ public class LoteDao {
 
             while (rs.next()) {
                 lote = new Lote();
-                lote.setCodigo(rs.getInt("cd_lote"));
+                lote.setCodigo(rs.getString("cd_lote"));
                 lote.setEstoque(rs.getInt("qt_estoque"));
 
             }

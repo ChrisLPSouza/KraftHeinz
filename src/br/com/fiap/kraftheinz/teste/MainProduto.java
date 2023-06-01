@@ -12,12 +12,17 @@ public class MainProduto {
     }
     private static void testaInsert() {
 
-        Produto produto = new Produto();
-        produto.setNome("Ketchup");
-        produto.setCdMarca(2);
+        Produto produto1 = new Produto();
+        produto1.setNome("Ketchup");
+        produto1.setCdMarca(1);
+        
+        Produto produto2 = new Produto();
+        produto2.setNome("Molho de tomate");
+        produto2.setCdMarca(2);
 
         ProdutoDao dao = new ProdutoDao();
-        dao.insert(produto);
+        dao.insert(produto1);
+        dao.insert(produto2);
 
     }
     private static void testaGetAll() {

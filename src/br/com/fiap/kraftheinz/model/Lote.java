@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class Lote implements Serializable {
-    private int codigo;
+    private String codigo;
     private Date fabricacao;
     private Date validade;
     private int estoque;
@@ -16,11 +16,11 @@ public class Lote implements Serializable {
 
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

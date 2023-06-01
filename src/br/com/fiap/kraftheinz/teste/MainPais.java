@@ -18,7 +18,7 @@ public class MainPais {
         Pais pais1 = new Pais("França");
         Pais pais2 = new Pais("Itália");
         Pais pais3 = new Pais("Argentina");
-        Pais pais4 = new Pais("Argentina");
+        Pais pais4 = new Pais("Brasil");
 
         List<Pais> listaPais = new ArrayList<>();
         listaPais.add(pais1);

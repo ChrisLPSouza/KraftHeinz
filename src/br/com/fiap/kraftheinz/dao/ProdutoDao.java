@@ -47,6 +47,7 @@ public class ProdutoDao {
                 Produto produto = new Produto();
                 produto.setCodigo(rs.getInt("cd_produto"));
                 produto.setNome(rs.getString("nm_produto"));
+                produto.setCdMarca(rs.getInt("cd_marca"));
 
                 produtos.add(produto);
             }
